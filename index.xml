@@ -1,4 +1,129 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home on Anmol Gupta</title><link>https://anmolgupta.github.io/</link><description>Recent content in Home on Anmol Gupta</description><generator>Hugo 0.154.5</generator><language>en-us</language><atom:link href="https://anmolgupta.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://anmolgupta.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://anmolgupta.github.io/about/</guid><description>&lt;p&gt;I am a backend software engineer with over a decade of experience working with Nodejs, TS, AWS and Kubernetes&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home on Anmol Gupta</title><link>https://anmolgupta.github.io/</link><description>Recent content in Home on Anmol Gupta</description><generator>Hugo 0.154.5</generator><language>en-us</language><lastBuildDate>Thu, 15 Jan 2026 13:16:01 -0500</lastBuildDate><atom:link href="https://anmolgupta.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>CagVsRag_draft</title><link>https://anmolgupta.github.io/blog/cagvsrag_draft/</link><pubDate>Thu, 15 Jan 2026 13:16:01 -0500</pubDate><guid>https://anmolgupta.github.io/blog/cagvsrag_draft/</guid><description>&lt;p&gt;A little background about me: I am a backend developer mostly comfortable working with Nodejs, TS, AWS and Kubernetes. My experience using Cursor and Claude code in the last year was very eye opening.&lt;/p&gt;
+&lt;p&gt;I, ofcourse, started using Cursor first to get the development done in early 2025. The developer experience that Cursor provided where it keeps on promnpting me on each line of what the code should be and then makes me always drag my choices towards his suggestions made me mad and always keep auto-suggest feature of cursor turned off. Turning off cursor&amp;rsquo;s auto suggest feature simply means you are writing more code and taking help from cursor on-demand basis like whenever you want to write a function and you know how it needs to be written where you are happy to write the facade of integrating other services and then iterate with cursor to write the smaller chunks about the other services.&lt;/p&gt;
+&lt;p&gt;This use of my cursor, made me a bit productive but I still didn&amp;rsquo;t have a measure to count on my prodcutivity as most of the developers in the tech industry are currently fiddling with. Now, this dragged me to an another use of cursor: Planning feature. where, I am mostly planning with cursor to develop a new feature. It was good but it always used to throw me suggestions on the current codebase that has been there where I was always left with the choices/patterns followed in the present code-base and I found a very little opportunity to explore more patterns outside of current code-base. While this was enough to get my task done, but it was still not enough to help me understand the trade-offs that I am making and future opporutnities to scale that task.&lt;/p&gt;
+&lt;p&gt;Disclaimer: My experience is from the period of Feb 2025-Dec 2025. Since then, cursor might have changed a lot that I am not aware of and feel free to email me if you want to add on top of it.&lt;/p&gt;
+&lt;p&gt;Around Sep 2025, I started using Claude Code since I was already using cursor outside of it&amp;rsquo;s major capabilities of throwing me suggestions as I write code. I started using Claude Code majorly towards planning my task. I saw the similar behvaiour as that of Cursor where Claude Code was suggesting me from the existing implementation of code base and from the existing patterns but it has really outperformed Cursor in the sense when it gives me patterns from the exiting code base and then I ask it to get me patterns out of the existing code base in the &lt;code&gt;Plan&lt;/code&gt; mode where it certainly tries to help me throw the patterns outside of my current codebase and that was real use-case where I started using Claude code more often. since now I have the ability to look a feature implementation from 3 code patterns and I can choose which one suits my taste and the organizational taste which I feel empowered to justify my implementation with greater confidence to other developers and leads (ofcouse everything has a tradeoff, the one that I chose gives me a better thought process of counting on my options, not choosing the other trade-offs and choosing the tradeoff in the option that I have selected).&lt;/p&gt;
+&lt;p&gt;at this point, I was sold to use claude code more often and got myself invested in creating custom commands, skills and custom development workflow for a project to get things flowing. one of the my best command even today is &lt;code&gt;/research&lt;/code&gt; which I have made for myself which tells claude to search internet and find answers for me rather than giving me answers from the currnet codebase or current context.&lt;/p&gt;
+&lt;p&gt;Now, since the project start expanding and expanding, ofcourse the benefits that I could reap out from claude code becomes less and less and honestly then I started looking on my options to expanding the Context window of Claude code. The only option that comes in mind for expanding context window is RAG but wait, isn&amp;rsquo;t cursor already not implementing RAG on your code base and then gives you answer from the RAG. Yes, it does. then, if you were not happy with Cursor then, why will you be happy with building custom RAG with Claude code. there, I started again investing in Cursor to see if it can provide me a better answer. Yes, it does since the base of the project has been straightened now and a practice has already been implemented to code Cursor became a real good tool to help me out.&lt;/p&gt;
+&lt;p&gt;Now, if I see the above story from an eye lens of another developer, they will not like the practices that is been followed in the project since the trade-offs that I made was on the present conditions in hand: scale, team size and expertise, time to get a feature developement done and cost of developing a feature. These situations will not remain constant in the future and every situation will change and so the developer needs and developement needs change. The question that now comes to my mind while making use of AI in coding task is: is RAG useful in development or is CAG more powerful in development?&lt;/p&gt;
+&lt;p&gt;Coming to this strategy where situation will never be the same and developer will always needs to adapt to the situation around him while devleoping a feature which means a developer is always researching, always innovating for better ways to implement his developement work, I feel going with CAG is more powerful in development. Now, issues with CAG is ofcourse that you are limited to a Context window size of an LLM. but wait, isn&amp;rsquo;t that what&amp;rsquo;s industry&amp;rsquo;s limitation too was where a single large codebase becomes too much more to manage and deploy that there are more conflicts than measurable developement in the codebase and that&amp;rsquo;s where industry leaders starts re-organizing, split a singly codebase to microservices, so that a small context of knowledge can be broken among multiple people and devleopers become free to innovate and experiment at their own boundaries, right?&lt;/p&gt;
+&lt;p&gt;Coming to this realization, I think it&amp;rsquo;s the choice where do you want to put your effort now while leveraging AI agents in development workflows. Are you fine to deal with the overhead of network in having micro-service architecture while making smallest investment in leveraging AI with CAG or do you want to make more investment towards a RAG and keep a single large codebase which keeps your network overhead and minimal as possible.&lt;/p&gt;
+ </description></item><item><title>CAG vs RAG: A Developer's Journey</title><link>https://anmolgupta.github.io/blog/cagvsrag/</link><pubDate>Wed, 14 Jan 2026 09:34:17 -0500</pubDate><guid>https://anmolgupta.github.io/blog/cagvsrag/</guid><description>&lt;p&gt;A little background about me: I&amp;rsquo;m a backend developer who spends most of my time with Node.js, TypeScript, AWS, and Kubernetes. Over the past year, I&amp;rsquo;ve been exploring AI coding tools, and honestly? It&amp;rsquo;s been quite a ride.&lt;/p&gt;
+&lt;h2 id="starting-with-cursor"&gt;Starting with Cursor&lt;/h2&gt;
+&lt;p&gt;Like many developers in early 2025, I jumped into Cursor. The auto-suggest feature was impressive in theory, but here&amp;rsquo;s the thing—it kept nudging me toward its suggestions on every single line. I found myself constantly fighting against the flow rather than going with it. So I turned off auto-suggest entirely.&lt;/p&gt;
+&lt;p&gt;Was that the &amp;ldquo;right&amp;rdquo; choice? Who knows. But it worked for me.&lt;/p&gt;
+&lt;p&gt;With auto-suggest off, I started using Cursor more selectively—writing the structure myself and calling on it when I needed help with specific functions or integrating services. It made me more productive, though I couldn&amp;rsquo;t quite measure by how much. (Sound familiar? We&amp;rsquo;re all trying to figure out how to quantify AI-assisted productivity.)&lt;/p&gt;
+&lt;p&gt;Then I discovered Cursor&amp;rsquo;s planning feature. This was interesting—I could plan out features before diving into code. But I noticed something: it kept suggesting patterns from my existing codebase. Great for consistency, not so great for exploring new approaches. I rarely got to see what else was out there.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Disclaimer: My experience spans Feb 2025 to Dec 2025. Cursor has probably evolved since then. If you&amp;rsquo;ve had different experiences, I&amp;rsquo;d love to hear about them.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id="discovering-claude-code"&gt;Discovering Claude Code&lt;/h2&gt;
+&lt;p&gt;Around September 2025, I started experimenting with Claude Code. I was already using Cursor outside its main auto-suggest capability, so why not try something different?&lt;/p&gt;
+&lt;p&gt;At first, the planning experience felt similar—suggestions based on existing code patterns. But then I found something that clicked for me: when I explicitly asked Claude Code to show me patterns &lt;em&gt;outside&lt;/em&gt; my current codebase during planning, it actually did.&lt;/p&gt;
+&lt;p&gt;Suddenly, I had options. I could look at a feature implementation from two or three different angles, choose the one that fit both my taste and my team&amp;rsquo;s preferences, and this is the part I really valued—justify my choices with confidence. Every approach has trade-offs, but now I understood what I was trading and why.&lt;/p&gt;
+&lt;p&gt;I got invested. I built custom commands, skills, and workflows. One of my favorites is a &lt;code&gt;/research&lt;/code&gt; command that tells Claude to search the internet for answers rather than defaulting to the current codebase or context. It changed how I approached problems.&lt;/p&gt;
+&lt;h2 id="hitting-the-context-ceiling"&gt;Hitting the Context Ceiling&lt;/h2&gt;
+&lt;p&gt;Here&amp;rsquo;s where it gets interesting. As my project grew, the benefits I was getting from Claude Code started diminishing. The codebase was simply getting too large for the context window to handle effectively.&lt;/p&gt;
+&lt;p&gt;So I started thinking about RAG (Retrieval-Augmented Generation). But wait—wasn&amp;rsquo;t that exactly what Cursor was doing all along? Searching my codebase and retrieving relevant context?&lt;/p&gt;
+&lt;p&gt;I went back to Cursor. And you know what? It worked better this time. The project had matured. Patterns were established. Having RAG-style retrieval over a well-structured codebase actually made sense now.&lt;/p&gt;
+&lt;h2 id="cag-vs-rag-its-not-about-picking-a-winner"&gt;CAG vs RAG: It&amp;rsquo;s Not About Picking a Winner&lt;/h2&gt;
+&lt;p&gt;Looking back at this journey, another developer might look at my choices and disagree completely. And that&amp;rsquo;s okay. The trade-offs I made were based on my situation at that moment: the scale of the project, team size and expertise, time constraints, and cost considerations. None of those things stay constant.&lt;/p&gt;
+&lt;p&gt;So which is better: RAG or CAG (Context-Augmented Generation)?&lt;/p&gt;
+&lt;p&gt;I don&amp;rsquo;t think that&amp;rsquo;s the right question. Here&amp;rsquo;s what I&amp;rsquo;ve been thinking about instead:&lt;/p&gt;
+&lt;p&gt;CAG feels more powerful when you&amp;rsquo;re in exploration mode—researching, innovating, trying new approaches. Yes, you&amp;rsquo;re limited by context window size. But isn&amp;rsquo;t that constraint similar to what the industry already deals with? Large monolithic codebases become unmanageable, so we split them into microservices. Smaller contexts, distributed ownership, freedom to experiment within boundaries.&lt;/p&gt;
+&lt;p&gt;RAG shines when you have an established codebase with clear patterns. It&amp;rsquo;s great for consistency and for working within existing structures.&lt;/p&gt;
+&lt;h2 id="where-do-you-want-to-invest"&gt;Where Do You Want to Invest?&lt;/h2&gt;
+&lt;p&gt;Maybe the real question is: where do you want to put your effort?&lt;/p&gt;
+&lt;p&gt;Are you okay with the network overhead of a microservice architecture while making a smaller investment in AI tooling with CAG? Or would you rather invest more heavily in RAG infrastructure to support a larger, unified codebase with minimal network complexity?&lt;/p&gt;
+&lt;p&gt;There&amp;rsquo;s no universal answer. Your mileage will vary. Your project will change. Your needs will evolve.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s the one thing I&amp;rsquo;m confident about: the situation will never stay the same, and the best approach is to stay adaptable rather than loyal to any single tool or strategy.&lt;/p&gt;
+&lt;p&gt;What&amp;rsquo;s your experience been? I&amp;rsquo;d genuinely like to know.&lt;/p&gt;
+ </description></item><item><title>Setting K8s</title><link>https://anmolgupta.github.io/blog/setting-k8s/</link><pubDate>Mon, 12 Jan 2026 11:10:21 -0500</pubDate><guid>https://anmolgupta.github.io/blog/setting-k8s/</guid><description> </description></item><item><title>Opentelemetry K8s Self Host</title><link>https://anmolgupta.github.io/blog/opentelemetry-k8s-self-host/</link><pubDate>Mon, 12 Jan 2026 11:10:14 -0500</pubDate><guid>https://anmolgupta.github.io/blog/opentelemetry-k8s-self-host/</guid><description> </description></item><item><title>Pipeline With Vector.dev</title><link>https://anmolgupta.github.io/blog/pipeline-with-vector.dev/</link><pubDate>Mon, 12 Jan 2026 11:09:40 -0500</pubDate><guid>https://anmolgupta.github.io/blog/pipeline-with-vector.dev/</guid><description> </description></item><item><title>Enterprise SSO with AWS Cognito</title><link>https://anmolgupta.github.io/blog/enterprise-sso/</link><pubDate>Mon, 12 Jan 2026 11:07:21 -0500</pubDate><guid>https://anmolgupta.github.io/blog/enterprise-sso/</guid><description> 
+&lt;p prefix="dct: http://purl.org/dc/terms/ cc: http://creativecommons.org/ns#"&gt;
+ &lt;a property="dct:title" rel="cc:attributionURL" href="https://anmolgupta.github.io/blog/enterprise-sso/"
+ &gt;Enterprise SSO with AWS Cognito&lt;/a
+ &gt;
+ by
+ &lt;a
+ rel="cc:attributionURL dct:creator"
+ property="cc:attributionName"
+ href="https://anmolgupta.github.io/"
+ &gt;Anmol Gupta&lt;/a
+ &gt;
+ is licensed under
+ &lt;a
+ href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1"
+ target="_blank"
+ rel="license noopener noreferrer"
+ style="display: inline-block"
+ &gt;CC BY-SA 4.0&lt;img
+ style="
+ height: 22px !important;
+ margin-left: 3px;
+ vertical-align: text-bottom;
+ "
+ src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"
+ alt="" /&gt;&lt;img
+ style="
+ height: 22px !important;
+ margin-left: 3px;
+ vertical-align: text-bottom;
+ "
+ src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"
+ alt="" /&gt;&lt;img
+ style="
+ height: 22px !important;
+ margin-left: 3px;
+ vertical-align: text-bottom;
+ "
+ src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"
+ alt=""
+ /&gt;&lt;/a&gt;
+&lt;/p&gt;
+</description></item><item><title>My First Post</title><link>https://anmolgupta.github.io/blog/my-first-post/</link><pubDate>Mon, 12 Jan 2026 03:23:57 -0500</pubDate><guid>https://anmolgupta.github.io/blog/my-first-post/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;
+&lt;p&gt;Visit the &lt;a href="https://gohugo.io"&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;
+ 
+&lt;p prefix="dct: http://purl.org/dc/terms/ cc: http://creativecommons.org/ns#"&gt;
+ &lt;a property="dct:title" rel="cc:attributionURL" href="https://anmolgupta.github.io/blog/my-first-post/"
+ &gt;My First Post&lt;/a
+ &gt;
+ by
+ &lt;a
+ rel="cc:attributionURL dct:creator"
+ property="cc:attributionName"
+ href="https://anmolgupta.github.io/"
+ &gt;Anmol Gupta&lt;/a
+ &gt;
+ is licensed under
+ &lt;a
+ href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1"
+ target="_blank"
+ rel="license noopener noreferrer"
+ style="display: inline-block"
+ &gt;CC BY-SA 4.0&lt;img
+ style="
+ height: 22px !important;
+ margin-left: 3px;
+ vertical-align: text-bottom;
+ "
+ src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"
+ alt="" /&gt;&lt;img
+ style="
+ height: 22px !important;
+ margin-left: 3px;
+ vertical-align: text-bottom;
+ "
+ src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"
+ alt="" /&gt;&lt;img
+ style="
+ height: 22px !important;
+ margin-left: 3px;
+ vertical-align: text-bottom;
+ "
+ src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"
+ alt=""
+ /&gt;&lt;/a&gt;
+&lt;/p&gt;
+</description></item><item><title>About</title><link>https://anmolgupta.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://anmolgupta.github.io/about/</guid><description>&lt;p&gt;I am a backend software engineer with over a decade of experience working with Nodejs, TS, AWS and Kubernetes&lt;/p&gt;
 &lt;p&gt;I live in EST with my partner and I have a daughter. I grew up in Delhi, India and spent half a decade working to build software in Bangalore where I have gained my initial experience as a Software Engineer.&lt;/p&gt;
 &lt;p&gt;I moved to Ontario and worked as a Platform Engineer where I have grown interest in learning K8s specifically where it can power a developer to so much.&lt;/p&gt;
 &lt;p&gt;All views here are my own and do not represent those of my employer, past or present.&lt;/p&gt;
