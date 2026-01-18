@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home on Anmol Gupta</title><link>https://anmolgupta.github.io/</link><description>Recent content in Home on Anmol Gupta</description><generator>Hugo 0.154.5</generator><language>en-us</language><lastBuildDate>Wed, 14 Jan 2026 09:34:17 -0500</lastBuildDate><atom:link href="https://anmolgupta.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>CAG vs RAG: A Developer's Journey</title><link>https://anmolgupta.github.io/blog/cagvsrag/</link><pubDate>Wed, 14 Jan 2026 09:34:17 -0500</pubDate><guid>https://anmolgupta.github.io/blog/cagvsrag/</guid><description>&lt;p&gt;A little background about me: I&amp;rsquo;m a backend developer who spends most of my time with Node.js, TypeScript, AWS, and Kubernetes. Over the past year, I&amp;rsquo;ve been exploring AI coding tools, and honestly? It&amp;rsquo;s been quite a ride.&lt;/p&gt;
-&lt;h2 id="starting-with-cursor"&gt;Starting with Cursor&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home on Anmol Gupta</title><link>https://anmolgupta.github.io/</link><description>Recent content in Home on Anmol Gupta</description><generator>Hugo 0.154.5</generator><language>en-us</language><lastBuildDate>Wed, 14 Jan 2026 09:34:17 -0500</lastBuildDate><atom:link href="https://anmolgupta.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>CAG vs RAG: A Developer's Journey</title><link>https://anmolgupta.github.io/blog/cagvsrag/</link><pubDate>Wed, 14 Jan 2026 09:34:17 -0500</pubDate><guid>https://anmolgupta.github.io/blog/cagvsrag/</guid><description>&lt;h2 id="starting-with-cursor"&gt;Starting with Cursor&lt;/h2&gt;
 &lt;p&gt;Like many developers in early 2025, I jumped into Cursor. The auto-suggest feature was impressive in theory, but here&amp;rsquo;s the thing—it kept nudging me toward its suggestions on every single line. I found myself constantly fighting against the flow rather than going with it. So I turned off auto-suggest entirely.&lt;/p&gt;
 &lt;p&gt;Was that the &amp;ldquo;right&amp;rdquo; choice? Who knows. But it worked for me.&lt;/p&gt;
 &lt;p&gt;With auto-suggest off, I started using Cursor more selectively—writing the structure myself and calling on it when I needed help with specific functions or integrating services. It made me more productive, though I couldn&amp;rsquo;t quite measure by how much. (Sound familiar? We&amp;rsquo;re all trying to figure out how to quantify AI-assisted productivity.)&lt;/p&gt;
@@ -26,10 +25,19 @@
 &lt;p&gt;There&amp;rsquo;s no universal answer. Your mileage will vary. Your project will change. Your needs will evolve.&lt;/p&gt;
 &lt;p&gt;That&amp;rsquo;s the one thing I&amp;rsquo;m confident about: the situation will never stay the same, and the best approach is to stay adaptable rather than loyal to any single tool or strategy.&lt;/p&gt;
 &lt;p&gt;What&amp;rsquo;s your experience been? I&amp;rsquo;d genuinely like to know.&lt;/p&gt;
- </description></item><item><title>About</title><link>https://anmolgupta.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://anmolgupta.github.io/about/</guid><description>&lt;p&gt;I am a backend software engineer with over a decade of experience working with Nodejs, TS, AWS and Kubernetes&lt;/p&gt;
-&lt;p&gt;I live in EST with my partner and I have a daughter. I grew up in Delhi, India and spent half a decade working to build software in Bangalore where I have gained my initial experience as a Software Engineer.&lt;/p&gt;
-&lt;p&gt;I moved to Ontario and worked as a Platform Engineer where I have grown interest in learning K8s specifically where it can power a developer to so much.&lt;/p&gt;
-&lt;p&gt;All views here are my own and do not represent those of my employer, past or present.&lt;/p&gt;
-&lt;h2 id="contact"&gt;Contact&lt;/h2&gt;
-&lt;p&gt;You can &lt;a href="mailto:anmol.gupta91@gmail.com"&gt;email me&lt;/a&gt;. Get in touch if you have an opinion on my posts. I enjoy hearing from people with similar interests.&lt;/p&gt;
+ </description></item><item><title>About</title><link>https://anmolgupta.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://anmolgupta.github.io/about/</guid><description>&lt;h3 id="who-am-i"&gt;Who am I&lt;/h3&gt;
+&lt;p&gt;I&amp;rsquo;m a software engineer for about 10 years, primarily at startups. I thrive in fast paced environment where accountability and ownership are high.&lt;/p&gt;
+&lt;p&gt;Outside of work, I enjoy drawing and painting with my daughter(mostly silly things), reading books, and feeding my board game obsession.&lt;/p&gt;
+&lt;h3 id="what-i-do"&gt;What I do&lt;/h3&gt;
+&lt;p&gt;My experience is majorly working with microservices, databases and building the systems behind products.&lt;/p&gt;
+&lt;p&gt;I love to dig deep into multiple technologies and infrastructure components to find the optimal balance of scale, cost, and operational overhead. My core expertise is in Node.js and TypeScript, backed by years of hands-on work with AWS and Kubernetes-giving me a strong grasp of both application code and the infrastructure that runs it. Following are some of the works that I have done:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;At &lt;a href="https://www.nuralogix.ai/"&gt;Nuralogix&lt;/a&gt;, I built multi-region infrastructure which enabled me to re-architect the application layer for scale, making sure that we all expand well while minimizing operational overhead and improving debugging, accessibility, and extensibility for development teams.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;At &lt;a href="https://goniyo.com/"&gt;Niyo&lt;/a&gt;, I led the core platform that powered the company&amp;rsquo;s first direct-to-consumer banking integrations with IDFC and Equitas. Beyond the initial launch, I focused on scaling the product and growing the team&amp;rsquo;s technical confidence to enable team to independently drive feature discussions and own implementation decisions.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can get in touch if you have an opinion on my posts. I enjoy hearing from people with similar interests. I am on &lt;a href="https://linkedin.com/in/anmolgupta91"&gt;LinkedIn&lt;/a&gt;&lt;/p&gt;
  </description></item></channel></rss>
