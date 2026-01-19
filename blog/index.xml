@@ -142,7 +142,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h3 id="the-four-non-negotiables-of-effective-unit-tests"&gt;The FOUR Non-Negotiables of Effective Unit Tests&lt;/h3&gt;
 &lt;h4 id="1-fast"&gt;1. FAST&lt;/h4&gt;
-&lt;p&gt;The whole point of unit-tests is to save time for a developer. They should run as quickly as hot reload responds to a code change with instant feedback. This is only possible when you mock external dependencies completely and run test cases in &lt;strong&gt;PARALLEL&lt;/strong&gt;. If your test suite takes minutes, you&amp;rsquo;ll stop running it.&lt;/p&gt;
+&lt;p&gt;The whole point of unit-tests is to save time for a developer. Test suit should run as quickly as hot reload responds to a code change with instant feedback. This is only possible when you mock external dependencies completely and run test cases in &lt;strong&gt;PARALLEL&lt;/strong&gt;. If your test suite takes minutes, you&amp;rsquo;ll stop running it.&lt;/p&gt;
 &lt;h5 id="parallel-execution-the-global-imports-challenge"&gt;Parallel Execution: The Global Imports Challenge&lt;/h5&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-ts" data-lang="ts"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;// src/services/__tests__/user.service.test.ts
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; { UserService } &lt;span style="color:#ff79c6"&gt;from&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;../user.service&amp;#34;&lt;/span&gt;;
