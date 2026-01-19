@@ -1,28 +1,389 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Anmol Gupta</title><link>https://anmolgupta.github.io/blog/</link><description>Recent content in Posts on Anmol Gupta</description><generator>Hugo 0.154.5</generator><language>en-us</language><lastBuildDate>Wed, 14 Jan 2026 09:34:17 -0500</lastBuildDate><atom:link href="https://anmolgupta.github.io/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>CAG vs RAG: A Developer's Journey</title><link>https://anmolgupta.github.io/blog/cagvsrag/</link><pubDate>Wed, 14 Jan 2026 09:34:17 -0500</pubDate><guid>https://anmolgupta.github.io/blog/cagvsrag/</guid><description>&lt;h2 id="starting-with-cursor"&gt;Starting with Cursor&lt;/h2&gt;
-&lt;p&gt;Like many developers in early 2025, I jumped into Cursor. The auto-suggest feature was impressive in theory, but here&amp;rsquo;s the thing—it kept nudging me toward its suggestions on every single line. I found myself constantly fighting against the flow rather than going with it. So I turned off auto-suggest entirely.&lt;/p&gt;
-&lt;p&gt;Was that the &amp;ldquo;right&amp;rdquo; choice? Who knows. But it worked for me.&lt;/p&gt;
-&lt;p&gt;With auto-suggest off, I started using Cursor more selectively—writing the structure myself and calling on it when I needed help with specific functions or integrating services. It made me more productive, though I couldn&amp;rsquo;t quite measure by how much. (Sound familiar? We&amp;rsquo;re all trying to figure out how to quantify AI-assisted productivity.)&lt;/p&gt;
-&lt;p&gt;Then I discovered Cursor&amp;rsquo;s planning feature. This was interesting—I could plan out features before diving into code. But I noticed something: it kept suggesting patterns from my existing codebase. Great for consistency, not so great for exploring new approaches. I rarely got to see what else was out there.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Disclaimer: My experience spans Feb 2025 to Dec 2025. Cursor has probably evolved since then. If you&amp;rsquo;ve had different experiences, I&amp;rsquo;d love to hear about them.&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id="discovering-claude-code"&gt;Discovering Claude Code&lt;/h2&gt;
-&lt;p&gt;Around September 2025, I started experimenting with Claude Code. I was already using Cursor outside its main auto-suggest capability, so why not try something different?&lt;/p&gt;
-&lt;p&gt;At first, the planning experience felt similar—suggestions based on existing code patterns. But then I found something that clicked for me: when I explicitly asked Claude Code to show me patterns &lt;em&gt;outside&lt;/em&gt; my current codebase during planning, it actually did.&lt;/p&gt;
-&lt;p&gt;Suddenly, I had options. I could look at a feature implementation from two or three different angles, choose the one that fit both my taste and my team&amp;rsquo;s preferences, and this is the part I really valued—justify my choices with confidence. Every approach has trade-offs, but now I understood what I was trading and why.&lt;/p&gt;
-&lt;p&gt;I got invested. I built custom commands, skills, and workflows. One of my favorites is a &lt;code&gt;/research&lt;/code&gt; command that tells Claude to search the internet for answers rather than defaulting to the current codebase or context. It changed how I approached problems.&lt;/p&gt;
-&lt;h2 id="hitting-the-context-ceiling"&gt;Hitting the Context Ceiling&lt;/h2&gt;
-&lt;p&gt;Here&amp;rsquo;s where it gets interesting. As my project grew, the benefits I was getting from Claude Code started diminishing. The codebase was simply getting too large for the context window to handle effectively.&lt;/p&gt;
-&lt;p&gt;So I started thinking about RAG (Retrieval-Augmented Generation). But wait—wasn&amp;rsquo;t that exactly what Cursor was doing all along? Searching my codebase and retrieving relevant context?&lt;/p&gt;
-&lt;p&gt;I went back to Cursor. And you know what? It worked better this time. The project had matured. Patterns were established. Having RAG-style retrieval over a well-structured codebase actually made sense now.&lt;/p&gt;
-&lt;h2 id="cag-vs-rag-its-not-about-picking-a-winner"&gt;CAG vs RAG: It&amp;rsquo;s Not About Picking a Winner&lt;/h2&gt;
-&lt;p&gt;Looking back at this journey, another developer might look at my choices and disagree completely. And that&amp;rsquo;s okay. The trade-offs I made were based on my situation at that moment: the scale of the project, team size and expertise, time constraints, and cost considerations. None of those things stay constant.&lt;/p&gt;
-&lt;p&gt;So which is better: RAG or CAG (Context-Augmented Generation)?&lt;/p&gt;
-&lt;p&gt;I don&amp;rsquo;t think that&amp;rsquo;s the right question. Here&amp;rsquo;s what I&amp;rsquo;ve been thinking about instead:&lt;/p&gt;
-&lt;p&gt;CAG feels more powerful when you&amp;rsquo;re in exploration mode—researching, innovating, trying new approaches. Yes, you&amp;rsquo;re limited by context window size. But isn&amp;rsquo;t that constraint similar to what the industry already deals with? Large monolithic codebases become unmanageable, so we split them into microservices. Smaller contexts, distributed ownership, freedom to experiment within boundaries.&lt;/p&gt;
-&lt;p&gt;RAG shines when you have an established codebase with clear patterns. It&amp;rsquo;s great for consistency and for working within existing structures.&lt;/p&gt;
-&lt;h2 id="where-do-you-want-to-invest"&gt;Where Do You Want to Invest?&lt;/h2&gt;
-&lt;p&gt;Maybe the real question is: where do you want to put your effort?&lt;/p&gt;
-&lt;p&gt;Are you okay with the network overhead of a microservice architecture while making a smaller investment in AI tooling with CAG? Or would you rather invest more heavily in RAG infrastructure to support a larger, unified codebase with minimal network complexity?&lt;/p&gt;
-&lt;p&gt;There&amp;rsquo;s no universal answer. Your mileage will vary. Your project will change. Your needs will evolve.&lt;/p&gt;
-&lt;p&gt;That&amp;rsquo;s the one thing I&amp;rsquo;m confident about: the situation will never stay the same, and the best approach is to stay adaptable rather than loyal to any single tool or strategy.&lt;/p&gt;
-&lt;p&gt;What&amp;rsquo;s your experience been? I&amp;rsquo;d genuinely like to know.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Anmol Gupta</title><link>https://anmolgupta.github.io/blog/</link><description>Recent content in Posts on Anmol Gupta</description><generator>Hugo 0.154.5</generator><language>en-us</language><lastBuildDate>Mon, 19 Jan 2026 10:43:12 -0500</lastBuildDate><atom:link href="https://anmolgupta.github.io/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Skill to Leverage Unit Testing</title><link>https://anmolgupta.github.io/blog/unit-testing/</link><pubDate>Mon, 19 Jan 2026 10:43:12 -0500</pubDate><guid>https://anmolgupta.github.io/blog/unit-testing/</guid><description>&lt;p&gt;After a decade of writing code professionally, I&amp;rsquo;ve finally made peace with unit testing but it took years of doing it wrong first.&lt;/p&gt;
+&lt;p&gt;For most of my early career, I wrote unit tests to satisfy code coverage requirements. If you&amp;rsquo;ve worked on an established codebase, you know the pain: writing unit-tests eventually becomes more complex than writing the production code itself.&lt;/p&gt;
+&lt;p&gt;Adding new features to these codebases creates an uncomfortable dilemma. You can either introduce a new pattern that makes testing productive, or you follow existing conventions to avoid touching too much surface area. More often than not, developers choose the path of least resistance by writing logic first and then bolting on tests afterward just to hit coverage numbers.&lt;/p&gt;
+&lt;p&gt;Those tests never helped anyone. They couldn&amp;rsquo;t guide development or catch regressions meaningfully. What&amp;rsquo;s labeled &amp;ldquo;quality assurance&amp;rdquo; quickly becomes technical debt, and the whole team&amp;rsquo;s productivity suffers debugging flaky tests instead of shipping features.&lt;/p&gt;
+&lt;p&gt;Through these mistakes, I learned something crucial: testability must be designed in from the start, not retrofitted later. The key to getting this correct is Dependency Injection (DI). When you can inject dependencies into a class, you&amp;rsquo;re no longer fighting the question of &lt;code&gt;how do I mock this global import?&lt;/code&gt; You simply pass in mocks directly. Object-oriented design makes dependencies explicit and swappable.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve intentionally chosen a complex code example here to demonstrate dealing with external dependencies. Bear with me, the payoff is worth it.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s say you have this Express Service:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-typescript" data-lang="typescript"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;// src/services/user.service.ts
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; { db } &lt;span style="color:#ff79c6"&gt;from&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;../db/client&amp;#34;&lt;/span&gt;; &lt;span style="color:#6272a4"&gt;// Global import we want to mock
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; { logger } &lt;span style="color:#ff79c6"&gt;from&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;../utils/logger&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;export&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;class&lt;/span&gt; UserService {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;async&lt;/span&gt; getUser(id: &lt;span style="color:#8be9fd"&gt;string&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; logger.info(&lt;span style="color:#f1fa8c"&gt;`Fetching user &lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;${&lt;/span&gt;id&lt;span style="color:#f1fa8c"&gt;}&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;`&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; user &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;await&lt;/span&gt; db.query(&lt;span style="color:#f1fa8c"&gt;&amp;#34;SELECT * FROM users WHERE id = $1&amp;#34;&lt;/span&gt;, [id]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;return&lt;/span&gt; user.rows[&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now adding a simple unit-test here looks like:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-typescript" data-lang="typescript"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;// src/services/__tests__/user.service.test.ts
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; { UserService } &lt;span style="color:#ff79c6"&gt;from&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;../user.service&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;// =============================================================================
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;// EXTRA OVERHEAD OF DEALING WITH GLOBAL IMPORTS
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;// =============================================================================
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;// Mock the entire module BEFORE importing the service
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;jest.mock(&lt;span style="color:#f1fa8c"&gt;&amp;#34;../../db/client&amp;#34;&lt;/span&gt;, () &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; ({
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; db&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; query: &lt;span style="color:#8be9fd"&gt;jest.fn&lt;/span&gt;(),
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}));
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;jest.mock(&lt;span style="color:#f1fa8c"&gt;&amp;#34;../../utils/logger&amp;#34;&lt;/span&gt;, () &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; ({
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; logger&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; info: &lt;span style="color:#8be9fd"&gt;jest.fn&lt;/span&gt;(),
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; error: &lt;span style="color:#8be9fd"&gt;jest.fn&lt;/span&gt;(),
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}));
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;// Import the mocked module to control it in tests
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; { db } &lt;span style="color:#ff79c6"&gt;from&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;../../db/client&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;// =============================================================================
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;// UNITL HERE
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;// =============================================================================
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;describe(&lt;span style="color:#f1fa8c"&gt;&amp;#34;UserService&amp;#34;&lt;/span&gt;, () &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;let&lt;/span&gt; service: &lt;span style="color:#8be9fd"&gt;UserService&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; beforeEach(() &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; service &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;new&lt;/span&gt; UserService();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; jest.clearAllMocks(); &lt;span style="color:#6272a4"&gt;// Reset mock state between tests
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; it(&lt;span style="color:#f1fa8c"&gt;&amp;#34;should fetch a user by id&amp;#34;&lt;/span&gt;, &lt;span style="color:#ff79c6"&gt;async&lt;/span&gt; () &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; mockUser &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; { id&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;123&amp;#34;&lt;/span&gt;, name&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;John Doe&amp;#34;&lt;/span&gt; };
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// Configure mock return value
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (db.query &lt;span style="color:#ff79c6"&gt;as&lt;/span&gt; jest.Mock).mockResolvedValue({ rows&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; [mockUser] });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; result &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;await&lt;/span&gt; service.getUser(&lt;span style="color:#f1fa8c"&gt;&amp;#34;123&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; expect(db.query).toHaveBeenCalledWith(&lt;span style="color:#f1fa8c"&gt;&amp;#34;SELECT * FROM users WHERE id = $1&amp;#34;&lt;/span&gt;, [
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;123&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; expect(result).toEqual(mockUser);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; it(&lt;span style="color:#f1fa8c"&gt;&amp;#34;should handle user not found&amp;#34;&lt;/span&gt;, &lt;span style="color:#ff79c6"&gt;async&lt;/span&gt; () &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (db.query &lt;span style="color:#ff79c6"&gt;as&lt;/span&gt; jest.Mock).mockResolvedValue({ rows&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; [] });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; result &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;await&lt;/span&gt; service.getUser(&lt;span style="color:#f1fa8c"&gt;&amp;#34;unknown&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; expect(result).toBeUndefined();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now compare this with the same service using &lt;strong&gt;Dependency Injection&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-typescript" data-lang="typescript"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;// src/services/user.service.ts
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;type&lt;/span&gt; { Database } &lt;span style="color:#ff79c6"&gt;from&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;../db/types&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;type&lt;/span&gt; { Logger } &lt;span style="color:#ff79c6"&gt;from&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;../utils/types&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;export&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;class&lt;/span&gt; UserService {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;constructor&lt;/span&gt;(&lt;span style="color:#ff79c6"&gt;private&lt;/span&gt; db: &lt;span style="color:#8be9fd"&gt;Database&lt;/span&gt;, &lt;span style="color:#ff79c6"&gt;private&lt;/span&gt; logger: &lt;span style="color:#8be9fd"&gt;Logger&lt;/span&gt;) {}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;async&lt;/span&gt; getUser(id: &lt;span style="color:#8be9fd"&gt;string&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;this&lt;/span&gt;.logger.info(&lt;span style="color:#f1fa8c"&gt;`Fetching user &lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;${&lt;/span&gt;id&lt;span style="color:#f1fa8c"&gt;}&lt;/span&gt;&lt;span style="color:#f1fa8c"&gt;`&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; user &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;await&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;this&lt;/span&gt;.db.query(&lt;span style="color:#f1fa8c"&gt;&amp;#34;SELECT * FROM users WHERE id = $1&amp;#34;&lt;/span&gt;, [id]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;return&lt;/span&gt; user.rows[&lt;span style="color:#bd93f9"&gt;0&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;// =============================================================================
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;// TEST BEGINS
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;// =============================================================================
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; { UserService } &lt;span style="color:#ff79c6"&gt;from&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;../user.service&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;describe(&lt;span style="color:#f1fa8c"&gt;&amp;#34;UserService&amp;#34;&lt;/span&gt;, () &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;let&lt;/span&gt; service: &lt;span style="color:#8be9fd"&gt;UserService&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;let&lt;/span&gt; mockDb&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; { query: &lt;span style="color:#8be9fd"&gt;jest.Mock&lt;/span&gt; };
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8be9fd;font-style:italic"&gt;let&lt;/span&gt; mockLogger&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; { info: &lt;span style="color:#8be9fd"&gt;jest.Mock&lt;/span&gt;; error: &lt;span style="color:#8be9fd"&gt;jest.Mock&lt;/span&gt; };
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; beforeEach(() &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// Create fresh mocks for each test
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; mockDb &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; { query: &lt;span style="color:#8be9fd"&gt;jest.fn&lt;/span&gt;() };
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; mockLogger &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; { info: &lt;span style="color:#8be9fd"&gt;jest.fn&lt;/span&gt;(), error: &lt;span style="color:#8be9fd"&gt;jest.fn&lt;/span&gt;() };
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; service &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;new&lt;/span&gt; UserService(mockDb, mockLogger);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; it(&lt;span style="color:#f1fa8c"&gt;&amp;#34;should fetch a user by id&amp;#34;&lt;/span&gt;, &lt;span style="color:#ff79c6"&gt;async&lt;/span&gt; () &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; mockUser &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; { id&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;123&amp;#34;&lt;/span&gt;, name&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;John Doe&amp;#34;&lt;/span&gt; };
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; mockDb.query.mockResolvedValue({ rows&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; [mockUser] });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; result &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;await&lt;/span&gt; service.getUser(&lt;span style="color:#f1fa8c"&gt;&amp;#34;123&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; expect(mockDb.query).toHaveBeenCalledWith(
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;SELECT * FROM users WHERE id = $1&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; [&lt;span style="color:#f1fa8c"&gt;&amp;#34;123&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; );
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; expect(result).toEqual(mockUser);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; it(&lt;span style="color:#f1fa8c"&gt;&amp;#34;should handle user not found&amp;#34;&lt;/span&gt;, &lt;span style="color:#ff79c6"&gt;async&lt;/span&gt; () &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// Configure mock to return empty rows
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; mockDb.query.mockResolvedValue({ rows&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; [] });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; result &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;await&lt;/span&gt; service.getUser(&lt;span style="color:#f1fa8c"&gt;&amp;#34;unknown&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// Verify the query was called correctly
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; expect(mockDb.query).toHaveBeenCalledWith(
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;SELECT * FROM users WHERE id = $1&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; [&lt;span style="color:#f1fa8c"&gt;&amp;#34;unknown&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; );
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// Verify logger was called
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; expect(mockLogger.info).toHaveBeenCalledWith(&lt;span style="color:#f1fa8c"&gt;&amp;#34;Fetching user unknown&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// Result should be undefined when no rows returned
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; expect(result).toBeUndefined();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="the-non-negotiables-of-effective-unit-tests"&gt;The Non-Negotiables of Effective Unit Tests&lt;/h3&gt;
+&lt;h4 id="fast"&gt;FAST&lt;/h4&gt;
+&lt;p&gt;The whole point of unit tests is to save me time as a developer. They should run as quickly as hot reload responds to a code change with instant feedback. This is only possible when you mock external dependencies completely and run tests in &lt;strong&gt;PARALLEL&lt;/strong&gt;. If your test suite takes minutes, you&amp;rsquo;ll stop running it.&lt;/p&gt;
+&lt;h5 id="parallel-execution-the-global-imports-challenge"&gt;Parallel Execution: The Global Imports Challenge&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-ts" data-lang="ts"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;// src/services/__tests__/user.service.test.ts
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; { UserService } &lt;span style="color:#ff79c6"&gt;from&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;../user.service&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;// Mock the entire module BEFORE importing the service
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;jest.mock(&lt;span style="color:#f1fa8c"&gt;&amp;#34;../../db/client&amp;#34;&lt;/span&gt;, () &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; ({
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; db&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; query: &lt;span style="color:#8be9fd"&gt;jest.fn&lt;/span&gt;(),
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}));
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;jest.mock(&lt;span style="color:#f1fa8c"&gt;&amp;#34;../../utils/logger&amp;#34;&lt;/span&gt;, () &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; ({
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; logger&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; info: &lt;span style="color:#8be9fd"&gt;jest.fn&lt;/span&gt;(),
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; error: &lt;span style="color:#8be9fd"&gt;jest.fn&lt;/span&gt;(),
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; },
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}));
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;// Import the mocked module to control it in tests
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; { db } &lt;span style="color:#ff79c6"&gt;from&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;../../db/client&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; { logger } &lt;span style="color:#ff79c6"&gt;from&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;../../utils/logger&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;describe(&lt;span style="color:#f1fa8c"&gt;&amp;#34;UserService&amp;#34;&lt;/span&gt;, () &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ❌ REMOVED: shared `service` variable
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ❌ REMOVED: beforeEach with service instantiation
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ✅ Only clear mocks before each test
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; beforeEach(() &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; jest.clearAllMocks();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; test.concurrent(&lt;span style="color:#f1fa8c"&gt;&amp;#34;should fetch a user by id&amp;#34;&lt;/span&gt;, &lt;span style="color:#ff79c6"&gt;async&lt;/span&gt; () &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ✅ Create service INSIDE the test
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; service &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;new&lt;/span&gt; UserService();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; mockUser &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; { id&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;123&amp;#34;&lt;/span&gt;, name&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;John Doe&amp;#34;&lt;/span&gt; };
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ✅ Use mockResolvedValueOnce (not mockResolvedValue)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (db.query &lt;span style="color:#ff79c6"&gt;as&lt;/span&gt; jest.Mock).mockResolvedValueOnce({ rows&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; [mockUser] });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; result &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;await&lt;/span&gt; service.getUser(&lt;span style="color:#f1fa8c"&gt;&amp;#34;123&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; expect(db.query).toHaveBeenCalledWith(&lt;span style="color:#f1fa8c"&gt;&amp;#34;SELECT * FROM users WHERE id = $1&amp;#34;&lt;/span&gt;, [
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;123&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; expect(result).toEqual(mockUser);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; test.concurrent(&lt;span style="color:#f1fa8c"&gt;&amp;#34;should handle user not found&amp;#34;&lt;/span&gt;, &lt;span style="color:#ff79c6"&gt;async&lt;/span&gt; () &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ✅ Create service INSIDE the test
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; service &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;new&lt;/span&gt; UserService();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ✅ Use mockResolvedValueOnce (not mockResolvedValue)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (db.query &lt;span style="color:#ff79c6"&gt;as&lt;/span&gt; jest.Mock).mockResolvedValueOnce({ rows&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; [] });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; result &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;await&lt;/span&gt; service.getUser(&lt;span style="color:#f1fa8c"&gt;&amp;#34;unknown&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; expect(db.query).toHaveBeenCalledWith(&lt;span style="color:#f1fa8c"&gt;&amp;#34;SELECT * FROM users WHERE id = $1&amp;#34;&lt;/span&gt;, [
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;unknown&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; expect(result).toBeUndefined();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id="effortless-parallelization-the-di-advantage"&gt;Effortless Parallelization: The DI Advantage&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-ts" data-lang="ts"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;// src/services/__tests__/user.service.test.ts
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; { UserService } &lt;span style="color:#ff79c6"&gt;from&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;../user.service&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;describe(&lt;span style="color:#f1fa8c"&gt;&amp;#34;UserService&amp;#34;&lt;/span&gt;, () &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ❌ REMOVED: shared variables (service, mockDb, mockLogger)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ❌ REMOVED: beforeEach with shared setup
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ✅ Helper to create fresh mocks for each test
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; createMocks &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; () &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; ({
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; mockDb&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; { query: &lt;span style="color:#8be9fd"&gt;jest.fn&lt;/span&gt;() },
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; mockLogger&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; { info: &lt;span style="color:#8be9fd"&gt;jest.fn&lt;/span&gt;(), error: &lt;span style="color:#8be9fd"&gt;jest.fn&lt;/span&gt;() },
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; test.concurrent(&lt;span style="color:#f1fa8c"&gt;&amp;#34;should fetch a user by id&amp;#34;&lt;/span&gt;, &lt;span style="color:#ff79c6"&gt;async&lt;/span&gt; () &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ✅ Create fresh mocks INSIDE each test
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; { mockDb, mockLogger } &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; createMocks();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; service &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;new&lt;/span&gt; UserService(mockDb, mockLogger);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; mockUser &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; { id&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;123&amp;#34;&lt;/span&gt;, name&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;John Doe&amp;#34;&lt;/span&gt; };
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; mockDb.query.mockResolvedValue({ rows&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; [mockUser] });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; result &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;await&lt;/span&gt; service.getUser(&lt;span style="color:#f1fa8c"&gt;&amp;#34;123&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; expect(mockDb.query).toHaveBeenCalledWith(
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;SELECT * FROM users WHERE id = $1&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; [&lt;span style="color:#f1fa8c"&gt;&amp;#34;123&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; );
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; expect(result).toEqual(mockUser);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; test.concurrent(&lt;span style="color:#f1fa8c"&gt;&amp;#34;should handle user not found&amp;#34;&lt;/span&gt;, &lt;span style="color:#ff79c6"&gt;async&lt;/span&gt; () &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ✅ Create fresh mocks INSIDE each test
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; { mockDb, mockLogger } &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; createMocks();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; service &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;new&lt;/span&gt; UserService(mockDb, mockLogger);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; mockDb.query.mockResolvedValue({ rows&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; [] });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; result &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;await&lt;/span&gt; service.getUser(&lt;span style="color:#f1fa8c"&gt;&amp;#34;unknown&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; expect(mockDb.query).toHaveBeenCalledWith(
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;SELECT * FROM users WHERE id = $1&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; [&lt;span style="color:#f1fa8c"&gt;&amp;#34;unknown&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; );
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; expect(mockLogger.info).toHaveBeenCalledWith(&lt;span style="color:#f1fa8c"&gt;&amp;#34;Fetching user unknown&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; expect(result).toBeUndefined();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;DI gives each test its own mock, so &lt;code&gt;mockResolvedValue&lt;/code&gt; just works. Global mocks share state across concurrent tests so if you forget to use &lt;code&gt;mockResolvedValueOnce&lt;/code&gt; and you&amp;rsquo;ll spend hours debugging flaky failures&lt;/p&gt;
+&lt;h3 id="isolated"&gt;Isolated&lt;/h3&gt;
+&lt;p&gt;Parallelism implies isolation. If your tests run concurrently without failing, they have no shared state, no order dependencies, no hidden coupling. Test A can&amp;rsquo;t break Test B.&lt;/p&gt;
+&lt;h3 id="repeatable"&gt;Repeatable&lt;/h3&gt;
+&lt;p&gt;A test should give you the same result whether you run it once or a thousand times. Reformat your code, refactor internals, swap out the database—No change. This leads to a critical point: test behavior, not implementation. The moment you assert &amp;ldquo;this function was called exactly twice,&amp;rdquo; you&amp;rsquo;re testing how something works, not what it does.&lt;/p&gt;
+&lt;p&gt;This is why the logger assertion in our example is problematic:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;❌ expect(mockLogger.info).toHaveBeenCalledWith(&amp;quot;Fetching user unknown&amp;quot;);&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Think about it: you could modify or remove this logging statement without breaking any functionality. That makes it an implementation detail, not a behavioral contract. Unit tests that assert on implementation details break when you refactor which is exactly what &lt;code&gt;repeatable&lt;/code&gt; guards against.&lt;/p&gt;
+&lt;h3 id="aaa-pattern-arrange-act-assert"&gt; &lt;a href="https://xp123.com/3a-arrange-act-assert/" target="_blank" rel="noopener noreferrer"&gt;AAA pattern (Arrange, Act, Assert)&lt;/a&gt; &lt;/h3&gt;
+&lt;p&gt;Structure matters. Every test should follow this pattern:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Arrange — set up your test data and dependencies&lt;/li&gt;
+&lt;li&gt;Act — execute &lt;strong&gt;ONE&lt;/strong&gt; thing (a single function call, one operation)&lt;/li&gt;
+&lt;li&gt;Assert — verify the &lt;strong&gt;RETURNED&lt;/strong&gt; values&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="-bad-multiple-acts-in-one-test"&gt;❌ BAD: Multiple Acts in One Test&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-ts" data-lang="ts"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; { UserService } &lt;span style="color:#ff79c6"&gt;from&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;../user.service&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;describe(&lt;span style="color:#f1fa8c"&gt;&amp;#34;UserService&amp;#34;&lt;/span&gt;, () &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; createMocks &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; () &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; ({
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; mockDb&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; { query: &lt;span style="color:#8be9fd"&gt;jest.fn&lt;/span&gt;() },
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; mockLogger&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; { info: &lt;span style="color:#8be9fd"&gt;jest.fn&lt;/span&gt;(), error: &lt;span style="color:#8be9fd"&gt;jest.fn&lt;/span&gt;() },
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ❌ VIOLATION: Multiple Acts in one test
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; it(&lt;span style="color:#f1fa8c"&gt;&amp;#34;should fetch and update user correctly&amp;#34;&lt;/span&gt;, &lt;span style="color:#ff79c6"&gt;async&lt;/span&gt; () &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ═══════════════════════════════════════════
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ARRANGE
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ═══════════════════════════════════════════
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; { mockDb, mockLogger } &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; createMocks();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; service &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;new&lt;/span&gt; UserService(mockDb, mockLogger);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; mockUser &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; { id&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;123&amp;#34;&lt;/span&gt;, name&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;John Doe&amp;#34;&lt;/span&gt; };
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; updatedUser &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; { id&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;123&amp;#34;&lt;/span&gt;, name&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;Jane Doe&amp;#34;&lt;/span&gt; };
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; mockDb.query
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; .mockResolvedValueOnce({ rows&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; [mockUser] }) &lt;span style="color:#6272a4"&gt;// for getUser
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; .mockResolvedValueOnce({ rows&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; [updatedUser] }); &lt;span style="color:#6272a4"&gt;// for updateUser
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ═══════════════════════════════════════════
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ACT #1 ❌ First action
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ═══════════════════════════════════════════
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; fetchedUser &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;await&lt;/span&gt; service.getUser(&lt;span style="color:#f1fa8c"&gt;&amp;#34;123&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ═══════════════════════════════════════════
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ASSERT #1 ❌ Intermediate assertion
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ═══════════════════════════════════════════
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; expect(fetchedUser).toEqual(mockUser);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ═══════════════════════════════════════════
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ACT #2 ❌ Second action
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ═══════════════════════════════════════════
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; result &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;await&lt;/span&gt; service.updateUser(&lt;span style="color:#f1fa8c"&gt;&amp;#34;123&amp;#34;&lt;/span&gt;, { name&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;Jane Doe&amp;#34;&lt;/span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ═══════════════════════════════════════════
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ASSERT #2 ❌ Final assertion
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ═══════════════════════════════════════════
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; expect(result).toEqual(updatedUser);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This Is Problematic since it is a Test Failure Debugging Nightmare:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-ts" data-lang="ts"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;┌─────────────────────────────────────────────────────────┐
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;│ Test&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;should fetch and update user correctly&amp;#34;&lt;/span&gt; │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;│ Status: &lt;span style="color:#8be9fd"&gt;FAILED&lt;/span&gt; ❌ │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;├─────────────────────────────────────────────────────────┤
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;│ Which action failed&lt;span style="color:#ff79c6"&gt;?&lt;/span&gt; │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;│ ├─ getUser(&lt;span style="color:#f1fa8c"&gt;&amp;#39;123&amp;#39;&lt;/span&gt;)&lt;span style="color:#ff79c6"&gt;?&lt;/span&gt; │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;│ └─ updateUser(&lt;span style="color:#f1fa8c"&gt;&amp;#39;123&amp;#39;&lt;/span&gt;, ...)&lt;span style="color:#ff79c6"&gt;?&lt;/span&gt; │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;│ │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;│ Which assertion failed&lt;span style="color:#ff79c6"&gt;?&lt;/span&gt; │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;│ ├─ fetchedUser equals mockUser&lt;span style="color:#ff79c6"&gt;?&lt;/span&gt; │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;│ ├─ result equals updatedUser&lt;span style="color:#ff79c6"&gt;?&lt;/span&gt; │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;│ │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;│ 🤷 Hard to tell without reading stack trace │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;└─────────────────────────────────────────────────────────┘
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h6 id="-good-refactored-into-separate-tests"&gt;✅ GOOD: Refactored into Separate Tests&lt;/h6&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-ts" data-lang="ts"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; { UserService } &lt;span style="color:#ff79c6"&gt;from&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;../user.service&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;describe(&lt;span style="color:#f1fa8c"&gt;&amp;#34;UserService&amp;#34;&lt;/span&gt;, () &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; createMocks &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; () &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; ({
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; mockDb&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; { query: &lt;span style="color:#8be9fd"&gt;jest.fn&lt;/span&gt;() },
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; mockLogger&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; { info: &lt;span style="color:#8be9fd"&gt;jest.fn&lt;/span&gt;(), error: &lt;span style="color:#8be9fd"&gt;jest.fn&lt;/span&gt;() },
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ✅ Test 1: Single Act - getUser
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; test.concurrent(&lt;span style="color:#f1fa8c"&gt;&amp;#34;should fetch a user by id&amp;#34;&lt;/span&gt;, &lt;span style="color:#ff79c6"&gt;async&lt;/span&gt; () &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ARRANGE
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; { mockDb, mockLogger } &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; createMocks();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; service &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;new&lt;/span&gt; UserService(mockDb, mockLogger);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; mockUser &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; { id&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;123&amp;#34;&lt;/span&gt;, name&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;John Doe&amp;#34;&lt;/span&gt; };
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; mockDb.query.mockResolvedValue({ rows&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; [mockUser] });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ACT (single action)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; result &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;await&lt;/span&gt; service.getUser(&lt;span style="color:#f1fa8c"&gt;&amp;#34;123&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ASSERT
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; expect(result).toEqual(mockUser);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ✅ Test 2: Single Act - updateUser
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; test.concurrent(&lt;span style="color:#f1fa8c"&gt;&amp;#34;should update a user&amp;#34;&lt;/span&gt;, &lt;span style="color:#ff79c6"&gt;async&lt;/span&gt; () &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ARRANGE
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; { mockDb, mockLogger } &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; createMocks();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; service &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;new&lt;/span&gt; UserService(mockDb, mockLogger);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; updatedUser &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; { id&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;123&amp;#34;&lt;/span&gt;, name&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;Jane Doe&amp;#34;&lt;/span&gt; };
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; mockDb.query.mockResolvedValue({ rows&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; [updatedUser] });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ACT (single action)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; result &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;await&lt;/span&gt; service.updateUser(&lt;span style="color:#f1fa8c"&gt;&amp;#34;123&amp;#34;&lt;/span&gt;, { name&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;Jane Doe&amp;#34;&lt;/span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ASSERT
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; expect(result).toEqual(updatedUser);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ✅ Test 3: Single Act - workflow (if testing integration)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; test.concurrent(&lt;span style="color:#f1fa8c"&gt;&amp;#34;should fetch user before update&amp;#34;&lt;/span&gt;, &lt;span style="color:#ff79c6"&gt;async&lt;/span&gt; () &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ARRANGE
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; { mockDb, mockLogger } &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; createMocks();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; service &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;new&lt;/span&gt; UserService(mockDb, mockLogger);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; mockUser &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; { id&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;123&amp;#34;&lt;/span&gt;, name&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;John Doe&amp;#34;&lt;/span&gt; };
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; mockDb.query.mockResolvedValue({ rows&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; [mockUser] });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ACT (single action - the workflow method)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ff79c6"&gt;const&lt;/span&gt; result &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;await&lt;/span&gt; service.fetchAndUpdateUser(&lt;span style="color:#f1fa8c"&gt;&amp;#34;123&amp;#34;&lt;/span&gt;, { name&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;Jane&amp;#34;&lt;/span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ASSERT
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; expect(result.original.name).toBe(&lt;span style="color:#f1fa8c"&gt;&amp;#34;John Doe&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; expect(result.updated.name).toBe(&lt;span style="color:#f1fa8c"&gt;&amp;#34;Jane&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="the-bottom-line"&gt;The Bottom Line&lt;/h2&gt;
+&lt;p&gt;LLMs have fundamentally changed the economics of starting fresh. Prototyping is cheaper than ever. Setting up a project with &lt;strong&gt;testability as a first-class concern&lt;/strong&gt; is no longer an expensive luxury but it&amp;rsquo;s
+becoming the default. Feed these guidelines to an LLM, and it can generate code structured exactly the way you want. That&amp;rsquo;s what we&amp;rsquo;ll explore in the next post.&lt;/p&gt;
  </description></item></channel></rss>
