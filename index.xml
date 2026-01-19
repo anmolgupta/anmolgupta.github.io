@@ -253,23 +253,23 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; expect(result).toBeUndefined();
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; });
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;});
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;DI gives each test its own mock, so &lt;code&gt;mockResolvedValue&lt;/code&gt; just works.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;DI gives each test case its own mock, so &lt;code&gt;mockResolvedValue&lt;/code&gt; just works.
 When you mock at the import level, Jest creates a single mock instance that&amp;rsquo;s shared across all tests running in parallel. If you use &lt;code&gt;mockResolvedValue&lt;/code&gt; instead of &lt;code&gt;mockResolvedValueOnce&lt;/code&gt;, one test&amp;rsquo;s setup can bleed into another—leading to flaky failures that are notoriously hard to debug.&lt;/p&gt;
 &lt;h4 id="2-isolation"&gt;2. Isolation&lt;/h4&gt;
 &lt;p&gt;Parallelism implies isolation. If your test cases run concurrently without failing, they have no shared state, no order dependencies, no hidden coupling. Test A can&amp;rsquo;t break Test B.&lt;/p&gt;
 &lt;h4 id="3-repeatable"&gt;3. Repeatable&lt;/h4&gt;
-&lt;p&gt;A test should give you the same result whether you run it once or a thousand times. Reformat your code, refactor internals, swap out the database—No change. This leads to a critical point: test behavior, not implementation. The moment you assert &amp;ldquo;this function was called exactly twice,&amp;rdquo; you&amp;rsquo;re testing how something works, not what it does.&lt;/p&gt;
+&lt;p&gt;A test case should give you the same result whether you run it once or a thousand times. Reformat your code, refactor internals, swap out the database—No change. This leads to a critical point: test behavior, not implementation. The moment you assert &amp;ldquo;this function was called exactly twice,&amp;rdquo; you&amp;rsquo;re testing how something works, not what it does.&lt;/p&gt;
 &lt;p&gt;This is why the logger assertion in our example is problematic:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;❌ expect(mockLogger.info).toHaveBeenCalledWith(&amp;quot;Fetching user unknown&amp;quot;);&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Think about it: you could modify or remove this logging statement without breaking any functionality. That makes it an implementation detail, not a behavioral contract. Unit-tests that assert on implementation details break when you refactor which is exactly what &lt;code&gt;repeatable&lt;/code&gt; guards against.&lt;/p&gt;
 &lt;h4 id="4-aaa-pattern-arrange-act-assert"&gt;4. &lt;a href="https://xp123.com/3a-arranged-act-assert/" target="_blank" rel="noopener noreferrer"&gt;AAA pattern (Arrange, Act, Assert)&lt;/a&gt; &lt;/h4&gt;
-&lt;p&gt;Structure matters. Every test should follow this pattern:&lt;/p&gt;
+&lt;p&gt;Structure matters. Every test-case should follow this pattern:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Arrange — set up your test data and dependencies&lt;/li&gt;
 &lt;li&gt;Act — execute &lt;strong&gt;ONE&lt;/strong&gt; thing (a single function call, one operation)&lt;/li&gt;
 &lt;li&gt;Assert — verify the &lt;strong&gt;RETURNED&lt;/strong&gt; values&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h5 id="-bad-multiple-acts-in-one-test"&gt;❌ BAD: Multiple Acts in One Test&lt;/h5&gt;
+&lt;h5 id="-bad-multiple-acts-in-one-test-case"&gt;❌ BAD: Multiple Acts in One Test-case&lt;/h5&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-ts" data-lang="ts"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; { UserService } &lt;span style="color:#ff79c6"&gt;from&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;../user.service&amp;#34;&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;describe(&lt;span style="color:#f1fa8c"&gt;&amp;#34;UserService&amp;#34;&lt;/span&gt;, () &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; {
@@ -278,7 +278,7 @@ When you mock at the import level, Jest creates a single mock instance that&amp;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; mockLogger&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; { info: &lt;span style="color:#8be9fd"&gt;jest.fn&lt;/span&gt;(), error: &lt;span style="color:#8be9fd"&gt;jest.fn&lt;/span&gt;() },
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; });
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ❌ VIOLATION: Multiple Acts in one test
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ❌ VIOLATION: Multiple Acts in one test-case
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; it(&lt;span style="color:#f1fa8c"&gt;&amp;#34;should fetch and update user correctly&amp;#34;&lt;/span&gt;, &lt;span style="color:#ff79c6"&gt;async&lt;/span&gt; () &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ═══════════════════════════════════════════
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#6272a4"&gt;// ARRANGE
@@ -314,7 +314,7 @@ When you mock at the import level, Jest creates a single mock instance that&amp;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; expect(result).toEqual(updatedUser);
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; });
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;});
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This Is Problematic since it is a Test Failure Debugging Nightmare:&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is problematic since it is a Test Failure Debugging Nightmare.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-ts" data-lang="ts"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;┌─────────────────────────────────────────────────────────┐
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;│ Test&lt;span style="color:#ff79c6"&gt;:&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;should fetch and update user correctly&amp;#34;&lt;/span&gt; │
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;│ Status: &lt;span style="color:#8be9fd"&gt;FAILED&lt;/span&gt; ❌ │
