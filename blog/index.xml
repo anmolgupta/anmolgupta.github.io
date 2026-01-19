@@ -269,7 +269,7 @@ When you mock at the import level, Jest creates a single mock instance that&amp;
 &lt;li&gt;Act — execute &lt;strong&gt;ONE&lt;/strong&gt; thing (a single function call, one operation)&lt;/li&gt;
 &lt;li&gt;Assert — verify the &lt;strong&gt;RETURNED&lt;/strong&gt; values&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h5 id="-bad-multiple-acts-in-one-test-case"&gt;❌ BAD: Multiple Acts in One Test-case&lt;/h5&gt;
+&lt;h5 id="-multiple-acts-in-one-test-case"&gt;❌ Multiple Acts in One Test-case&lt;/h5&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-ts" data-lang="ts"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; { UserService } &lt;span style="color:#ff79c6"&gt;from&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;../user.service&amp;#34;&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;describe(&lt;span style="color:#f1fa8c"&gt;&amp;#34;UserService&amp;#34;&lt;/span&gt;, () &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; {
@@ -330,7 +330,7 @@ When you mock at the import level, Jest creates a single mock instance that&amp;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;│ 🤷 Hard to tell without reading stack trace │
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;└─────────────────────────────────────────────────────────┘
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h6 id="-good-refactored-into-separate-tests"&gt;✅ GOOD: Refactored into Separate Tests&lt;/h6&gt;
+&lt;h6 id="-refactored-into-separate-tests"&gt;✅ Refactored into Separate Tests&lt;/h6&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-ts" data-lang="ts"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; { UserService } &lt;span style="color:#ff79c6"&gt;from&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;../user.service&amp;#34;&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;describe(&lt;span style="color:#f1fa8c"&gt;&amp;#34;UserService&amp;#34;&lt;/span&gt;, () &lt;span style="color:#ff79c6"&gt;=&amp;gt;&lt;/span&gt; {
