@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home on Anmol Gupta</title><link>https://anmolgupta.github.io/</link><description>Recent content in Home on Anmol Gupta</description><generator>Hugo 0.154.5</generator><language>en-us</language><lastBuildDate>Mon, 19 Jan 2026 10:43:12 -0500</lastBuildDate><atom:link href="https://anmolgupta.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Skill to Leverage Unit Testing</title><link>https://anmolgupta.github.io/blog/unit-testing/</link><pubDate>Mon, 19 Jan 2026 10:43:12 -0500</pubDate><guid>https://anmolgupta.github.io/blog/unit-testing/</guid><description>&lt;p&gt;After a decade of writing code professionally, I&amp;rsquo;ve finally made peace with unit testing but it took years of doing it wrong first.&lt;/p&gt;
-&lt;p&gt;For most of my early career, I wrote unit tests to satisfy code coverage requirements. If you&amp;rsquo;ve worked on an established codebase, you know the pain: writing unit-tests eventually becomes more complex than writing the production code itself.&lt;/p&gt;
-&lt;p&gt;Adding new features to these codebases creates an uncomfortable dilemma. You can either introduce a new pattern that makes testing productive, or you follow existing conventions to avoid touching too much surface area. More often than not, developers choose the path of least resistance by writing logic first and then bolting on tests afterward just to hit coverage numbers.&lt;/p&gt;
-&lt;p&gt;Those tests never helped anyone. They couldn&amp;rsquo;t guide development or catch regressions meaningfully. What&amp;rsquo;s labeled &amp;ldquo;quality assurance&amp;rdquo; quickly becomes technical debt, and the whole team&amp;rsquo;s productivity suffers debugging flaky tests instead of shipping features.&lt;/p&gt;
+&lt;p&gt;For most of my early career, I wrote unit-tests to satisfy code coverage requirements. If you&amp;rsquo;ve worked on an established codebase, you know the pain: writing unit-tests eventually becomes more complex than writing the production code itself.&lt;/p&gt;
+&lt;p&gt;Adding new features to these codebases creates an uncomfortable dilemma. You can either introduce a new pattern that makes testing productive, or you follow existing conventions to avoid touching too much surface area. More often than not, developers choose the path of least resistance by writing logic first and then bolting on unit-tests afterward just to hit coverage numbers.&lt;/p&gt;
+&lt;p&gt;Those test cases never helped anyone. They couldn&amp;rsquo;t guide development or catch regressions meaningfully. What&amp;rsquo;s labeled &amp;ldquo;quality assurance&amp;rdquo; quickly becomes technical debt, and the whole team&amp;rsquo;s productivity suffers debugging flaky test cases instead of shipping features.&lt;/p&gt;
 &lt;p&gt;Through these mistakes, I learned something crucial: testability must be designed in from the start, not retrofitted later. The key to getting this correct is Dependency Injection (DI). When you can inject dependencies into a class, you&amp;rsquo;re no longer fighting the question of &lt;code&gt;how do I mock this global import?&lt;/code&gt; You simply pass in mocks directly. Object-oriented design makes dependencies explicit and swappable.&lt;/p&gt;
 &lt;p&gt;I&amp;rsquo;ve intentionally chosen a complex code example here to demonstrate dealing with external dependencies. Bear with me, the payoff is worth it.&lt;/p&gt;
 &lt;p&gt;Let&amp;rsquo;s say you have this Express Service:&lt;/p&gt;
@@ -139,9 +139,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; expect(result).toBeUndefined();
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; });
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;});
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="the-non-negotiables-of-effective-unit-tests"&gt;The Non-Negotiables of Effective Unit Tests&lt;/h3&gt;
-&lt;h4 id="fast"&gt;FAST&lt;/h4&gt;
-&lt;p&gt;The whole point of unit tests is to save me time as a developer. They should run as quickly as hot reload responds to a code change with instant feedback. This is only possible when you mock external dependencies completely and run tests in &lt;strong&gt;PARALLEL&lt;/strong&gt;. If your test suite takes minutes, you&amp;rsquo;ll stop running it.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="the-four-non-negotiables-of-effective-unit-tests"&gt;The FOUR Non-Negotiables of Effective Unit Tests&lt;/h3&gt;
+&lt;h4 id="1-fast"&gt;1. FAST&lt;/h4&gt;
+&lt;p&gt;The whole point of unit-tests is to save time for a developer. They should run as quickly as hot reload responds to a code change with instant feedback. This is only possible when you mock external dependencies completely and run test cases in &lt;strong&gt;PARALLEL&lt;/strong&gt;. If your test suite takes minutes, you&amp;rsquo;ll stop running it.&lt;/p&gt;
 &lt;h5 id="parallel-execution-the-global-imports-challenge"&gt;Parallel Execution: The Global Imports Challenge&lt;/h5&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-ts" data-lang="ts"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;// src/services/__tests__/user.service.test.ts
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;import&lt;/span&gt; { UserService } &lt;span style="color:#ff79c6"&gt;from&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;../user.service&amp;#34;&lt;/span&gt;;
@@ -252,15 +253,16 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; expect(result).toBeUndefined();
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; });
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;});
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;DI gives each test its own mock, so &lt;code&gt;mockResolvedValue&lt;/code&gt; just works. Global mocks share state across concurrent tests so if you forget to use &lt;code&gt;mockResolvedValueOnce&lt;/code&gt; and you&amp;rsquo;ll spend hours debugging flaky failures&lt;/p&gt;
-&lt;h3 id="isolated"&gt;Isolated&lt;/h3&gt;
-&lt;p&gt;Parallelism implies isolation. If your tests run concurrently without failing, they have no shared state, no order dependencies, no hidden coupling. Test A can&amp;rsquo;t break Test B.&lt;/p&gt;
-&lt;h3 id="repeatable"&gt;Repeatable&lt;/h3&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;DI gives each test its own mock, so &lt;code&gt;mockResolvedValue&lt;/code&gt; just works.
+When you mock at the import level, Jest creates a single mock instance that&amp;rsquo;s shared across all tests running in parallel. If you use &lt;code&gt;mockResolvedValue&lt;/code&gt; instead of &lt;code&gt;mockResolvedValueOnce&lt;/code&gt;, one test&amp;rsquo;s setup can bleed into another—leading to flaky failures that are notoriously hard to debug.&lt;/p&gt;
+&lt;h4 id="2-isolation"&gt;2. Isolation&lt;/h4&gt;
+&lt;p&gt;Parallelism implies isolation. If your test cases run concurrently without failing, they have no shared state, no order dependencies, no hidden coupling. Test A can&amp;rsquo;t break Test B.&lt;/p&gt;
+&lt;h4 id="3-repeatable"&gt;3. Repeatable&lt;/h4&gt;
 &lt;p&gt;A test should give you the same result whether you run it once or a thousand times. Reformat your code, refactor internals, swap out the database—No change. This leads to a critical point: test behavior, not implementation. The moment you assert &amp;ldquo;this function was called exactly twice,&amp;rdquo; you&amp;rsquo;re testing how something works, not what it does.&lt;/p&gt;
 &lt;p&gt;This is why the logger assertion in our example is problematic:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;❌ expect(mockLogger.info).toHaveBeenCalledWith(&amp;quot;Fetching user unknown&amp;quot;);&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Think about it: you could modify or remove this logging statement without breaking any functionality. That makes it an implementation detail, not a behavioral contract. Unit tests that assert on implementation details break when you refactor which is exactly what &lt;code&gt;repeatable&lt;/code&gt; guards against.&lt;/p&gt;
-&lt;h3 id="aaa-pattern-arrange-act-assert"&gt; &lt;a href="https://xp123.com/3a-arrange-act-assert/" target="_blank" rel="noopener noreferrer"&gt;AAA pattern (Arrange, Act, Assert)&lt;/a&gt; &lt;/h3&gt;
+&lt;p&gt;Think about it: you could modify or remove this logging statement without breaking any functionality. That makes it an implementation detail, not a behavioral contract. Unit-tests that assert on implementation details break when you refactor which is exactly what &lt;code&gt;repeatable&lt;/code&gt; guards against.&lt;/p&gt;
+&lt;h4 id="4-aaa-pattern-arrange-act-assert"&gt;4. &lt;a href="https://xp123.com/3a-arranged-act-assert/" target="_blank" rel="noopener noreferrer"&gt;AAA pattern (Arrange, Act, Assert)&lt;/a&gt; &lt;/h4&gt;
 &lt;p&gt;Structure matters. Every test should follow this pattern:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Arrange — set up your test data and dependencies&lt;/li&gt;
