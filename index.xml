@@ -395,7 +395,7 @@ becoming the default. Feed these guidelines to an LLM, and it can generate code 
 &lt;p&gt;Outside of work, I enjoy drawing and painting with my daughter(mostly silly things), reading books, and feeding my board game obsession.&lt;/p&gt;
 &lt;h3 id="what-i-do"&gt;What I do&lt;/h3&gt;
 &lt;p&gt;My experience is majorly working with microservices, databases and building the systems behind products.&lt;/p&gt;
-&lt;p&gt;I love to dig deep into multiple technologies and infrastructure components to find the optimal balance of scale, cost, and operational overhead. My core expertise is in Node.js and TypeScript, backed by years of hands-on work with AWS and Kubernetes-giving me a strong grasp of both application code and the infrastructure that runs it. Following are some of the works that I have done:&lt;/p&gt;
+&lt;p&gt;I love to dig deep into multiple technologies and infrastructure components to find the optimal balance of scale, cost, and operational overhead. My core expertise is in Node.js, TypeScript, Python backed by years of hands-on work with AWS and Kubernetes-giving me a strong grasp of both application code and the infrastructure that runs it. Following are some of the works that I have done:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;At &lt;a href="https://www.nuralogix.ai/" target="_blank" rel="noopener noreferrer"&gt;Nuralogix&lt;/a&gt; , I built multi-region infrastructure which enabled me to re-architect the application layer for scale, making sure that we all expand well while minimizing operational overhead and improving debugging, accessibility, and extensibility for development teams.&lt;/p&gt;
